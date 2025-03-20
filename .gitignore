@@ -1,0 +1,3 @@
+# Ignore fonts and bootstrap directories
+/fonts/
+/bootstrap/

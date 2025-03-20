@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(/fonts/Roboto/static/Roboto-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(/fonts/Roboto/static/Roboto-Bold.ttf);
+  font-weight: 700;
+}
+
+:root {
+  --btn-primary-color: #4a7c59;
+}
+
+.btn-primary {
+  background-color: var(--btn-primary-color) !important;
+  border-color: var(--btn-primary-color) !important;
+}
+
+* {
+  font-family: "Roboto";
+}
