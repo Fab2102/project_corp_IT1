@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
     <link
       rel="stylesheet"
       href="/bootstrap/bootstrap-5.3.3-dist/css/bootstrap.css"
@@ -11,6 +12,19 @@
     <title>Modern Responsive Navbar</title>
 
     <style>
+=======
+    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.css" />
+    <title>Modern Responsive Navbar</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+>>>>>>> 782afaf96414c10ec937a5b7ff0cf91d178a26f4
       nav {
         display: flex;
         justify-content: space-between;
@@ -121,12 +135,17 @@
 
       /* MOBILE MENU */
       .mobile-menu {
+<<<<<<< HEAD
         display: block; /* Always block for height transition */
+=======
+        display: none;
+>>>>>>> 782afaf96414c10ec937a5b7ff0cf91d178a26f4
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
         background: #fff;
+<<<<<<< HEAD
         padding: 0 2rem; /* Start with no padding */
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         max-height: 0; /* Start with no height */
@@ -137,6 +156,14 @@
       .mobile-menu.active {
         max-height: 500px; /* Adjust based on content height */
         padding: 1.5rem 2rem; /* Add padding when active */
+=======
+        padding: 1.5rem 2rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .mobile-menu.active {
+        display: block;
+>>>>>>> 782afaf96414c10ec937a5b7ff0cf91d178a26f4
       }
 
       .mobile-menu a {
@@ -146,12 +173,15 @@
         text-decoration: none;
         border-bottom: none;
         margin-bottom: 0.5rem;
+<<<<<<< HEAD
         opacity: 0; /* Start with invisible links */
         transition: opacity 0.3s ease-out; /* Smooth fade-in */
       }
 
       .mobile-menu.active a {
         opacity: 1; /* Fade in links when active */
+=======
+>>>>>>> 782afaf96414c10ec937a5b7ff0cf91d178a26f4
       }
 
       .mobile-auth-links {
