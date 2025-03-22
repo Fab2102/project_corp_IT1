@@ -8,7 +8,7 @@ header {
   background-image: url(/images/forest_picture.jpg);
   background-size: cover;
   background-position: center;
-  height: 92vh;
+  height: 93vh;
   overflow: hidden;
 }
 
@@ -29,12 +29,10 @@ header {
 }
 
 .hero-section h2 {
-  font-size: 3rem;
   transition: transform 0.2s ease-out;
 }
 
 .hero-section p {
-  font-size: 1.25rem;
   transition: transform 0.2s ease-out;
 }
 
