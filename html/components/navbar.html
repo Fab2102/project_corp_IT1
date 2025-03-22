@@ -15,14 +15,14 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0.9rem 2%;
+        padding: 0.7rem 2%;
         background: #ffffff;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         position: relative;
       }
 
       .logo {
-        font-size: 1.5rem;
+        font-size: 0.5rem;
         font-weight: 700;
         color: #333;
         text-decoration: none;
@@ -35,7 +35,8 @@
         gap: 3rem;
         align-items: center;
         margin-right: auto;
-        padding-top: 0.3em;
+        font-size: 0.7em;
+        margin-top: 1.5px;
       }
 
       .nav-links a,
@@ -50,10 +51,10 @@
       .nav-links a::after {
         content: "";
         position: absolute;
-        bottom: 1px;
+        bottom: 5%;
         left: 0;
         width: 0;
-        height: 2px;
+        height: 0.12em;
         background: #4a7c59;
         transition: width 0.45s ease;
       }
@@ -64,41 +65,41 @@
 
       .auth-links {
         display: flex;
-        gap: 1.5rem;
+        gap: 1.3rem;
         align-items: center;
         margin-left: 2rem;
       }
 
       .auth-links a {
-        font-size: 0.9rem;
+        font-size: 0.6rem;
         padding-top: 0.3em;
         padding-bottom: 0.3em;
-        border-radius: 2em;
+        border-radius: 0.9em;
         transition: transform 0.25s ease-out;
       }
 
       .auth-links a:first-child {
         color: #4a7c59;
-        border: 2px solid #4a7c59;
-        padding-right: 1.8em;
-        padding-left: 1.8em;
+        border: 1.4px solid #4a7c59;
+        padding-right: 1em;
+        padding-left: 1em;
       }
 
       .auth-links a:first-child:hover {
-        transform: scale(1.04);
+        transform: scale(1.07);
         will-change: transform;
       }
 
       .auth-links a:last-child {
         background: #4a7c59;
-        border: 2px solid #4a7c59;
+        border: 1.4px solid #4a7c59;
         color: white;
-        padding-right: 1.5em;
-        padding-left: 1.5em;
+        padding-right: 1em;
+        padding-left: 1em;
       }
 
       .auth-links a:last-child:hover {
-        transform: scale(1.04);
+        transform: scale(1.07);
         will-change: transform;
       }
 
@@ -214,7 +215,7 @@
       </div>
 
       <div class="auth-links">
-        <a href="/html/pages/login.html">Login</a>
+        <a href="/html/pages/login.html">Sign in</a>
         <a href="/html/pages/sign-up.html">Sign Up</a>
       </div>
 
