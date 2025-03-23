@@ -1,0 +1,36 @@
+body {
+  background-color: #D8D2BD;
+  }
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2F2F2F;
+  color: #FFFFFF;
+  padding: 50px;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+.about-text {
+  flex: 1;
+  padding: 20px;
+}
+.about-text h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+.about-image {
+  flex: 1;
+}
+.about-image img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
