@@ -1,4 +1,3 @@
-// inserting navbar.html into the other html pages
 const navContainer = document.querySelector(".target-nav");
 
 fetch("/html/components/navbar.html")
