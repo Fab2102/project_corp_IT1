@@ -8,11 +8,73 @@
     />
     <link rel="stylesheet" href="/css/global.css" />
     <title>Footer</title>
+    <style>
+      .apple-style-footer {
+        background-color: #2d6a4f; /* Apple-like green */
+        color: #ffffff;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .footer-links a {
+        color: #ffffff;
+        text-decoration: none;
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+      }
+
+      .footer-links a:hover {
+        opacity: 1;
+        text-decoration: underline;
+      }
+
+      .footer-title {
+        font-weight: 600;
+        margin-bottom: 15px;
+        font-size: 1rem;
+        opacity: 1;
+      }
+
+      .footer-divider {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 20px 0;
+      }
+
+      .footer-legal {
+        font-size: 0.8rem;
+        opacity: 0.7;
+      }
+
+      .footer-legal a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      .footer-legal a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-logo {
+        filter: brightness(0) invert(1);
+        height: 20px;
+        margin-bottom: 10px;
+      }
+    </style>
   </head>
   <body>
-    <footer class="bg-dark text-light pt-5">
-      <div class="container px-5">
+    <footer class="apple-style-footer">
+      <div class="container">
         <div class="row">
+<<<<<<< HEAD
           <div class="col-6 col-lg-4">
             <h3 class="fw-bold">Coding Yaar</h3>
             <p class="pt-2">
@@ -20,63 +82,90 @@
             </p>
             <p class="mb-2">0987654321</p>
             <p>1234567890</p>
+=======
+          <div class="col-12 col-md-6 col-lg-3 mb-4">
+            <div class="footer-links">
+              <span class="footer-title">Shop and Learn</span>
+              <a href="#">Store</a>
+              <a href="#">Mac</a>
+              <a href="#">iPad</a>
+              <a href="#">iPhone</a>
+              <a href="#">Watch</a>
+              <a href="#">AirPods</a>
+            </div>
+>>>>>>> 959aa14 (message)
           </div>
-          <div class="col">
-            <h4>Menu</h4>
-            <ul class="list-unstyled pt-2">
-              <li class="py-1">Home</li>
-              <li class="py-1">Shorts</li>
-              <li class="py-1">About</li>
-              <li class="py-1">Contact</li>
-            </ul>
+
+          <div class="col-12 col-md-6 col-lg-3 mb-4">
+            <div class="footer-links">
+              <span class="footer-title">Services</span>
+              <a href="#">Apple Music</a>
+              <a href="#">Apple TV+</a>
+              <a href="#">Apple Fitness+</a>
+              <a href="#">iCloud</a>
+              <a href="#">Apple One</a>
+              <a href="#">Apple Books</a>
+            </div>
           </div>
-          <div class="col">
-            <h4>More</h4>
-            <ul class="list-unstyled pt-2">
-              <li class="py-1">Landing Pages</li>
-              <li class="py-1">FAQs</li>
-            </ul>
+
+          <div class="col-12 col-md-6 col-lg-3 mb-4">
+            <div class="footer-links">
+              <span class="footer-title">Apple Store</span>
+              <a href="#">Find a Store</a>
+              <a href="#">Genius Bar</a>
+              <a href="#">Today at Apple</a>
+              <a href="#">Apple Camp</a>
+              <a href="#">Apple Trade In</a>
+              <a href="#">Order Status</a>
+            </div>
           </div>
-          <div class="col">
-            <h4>Categories</h4>
-            <ul class="list-unstyled pt-2">
-              <li class="py-1">Navbars</li>
-              <li class="py-1">Cards</li>
-              <li class="py-1">Buttons</li>
-              <li class="py-1">Carousels</li>
-            </ul>
-          </div>
-          <div class="col-6 col-lg-3 text-lg-end">
-            <h4>Social Media Links</h4>
-            <div class="social-media pt-2">
-              <a href="#" class="text-light fs-2 me-3"
-                ><i class="bi bi-facebook"></i
-              ></a>
-              <a href="#" class="text-light fs-2 me-3"
-                ><i class="bi bi-pinterest"></i
-              ></a>
-              <a href="#" class="text-light fs-2 me-3"
-                ><i class="bi bi-instagram"></i
-              ></a>
-              <a href="#" class="text-light fs-2"
-                ><i class="bi bi-linkedin"></i
-              ></a>
+
+          <div class="col-12 col-md-6 col-lg-3 mb-4">
+            <div class="footer-links">
+              <span class="footer-title">About Apple</span>
+              <a href="#">Newsroom</a>
+              <a href="#">Apple Leadership</a>
+              <a href="#">Career Opportunities</a>
+              <a href="#">Investors</a>
+              <a href="#">Ethics & Compliance</a>
+              <a href="#">Events</a>
             </div>
           </div>
         </div>
-        <hr />
-        <div class="d-sm-flex justify-content-between py-1">
-          <p>2023 © Coding Yaar. All Rights Reserved.</p>
-          <p>
-            <a href="#" class="text-light text-decoration-none pe-4"
-              >Terms of use</a
+
+        <div class="footer-divider"></div>
+
+        <div class="row">
+          <div class="col-12 mb-3">
+            <p class="footer-legal">
+              More ways to shop: <a href="#">Find an Apple Store</a> or
+              <a href="#">other retailer</a> near you. Or call 1-800-MY-APPLE.
+            </p>
+          </div>
+
+          <div class="col-12">
+            <div
+              class="d-flex flex-column flex-md-row justify-content-between align-items-center"
             >
-            <a href="#" class="text-light text-decoration-none">
-              Privacy policy</a
-            >
-          </p>
+              <p class="footer-legal mb-2 mb-md-0">
+                Copyright © 2024 Apple Inc. All rights reserved.
+              </p>
+
+              <div class="d-flex">
+                <a href="#" class="footer-legal me-3">Privacy Policy</a>
+                <a href="#" class="footer-legal me-3">Terms of Use</a>
+                <a href="#" class="footer-legal me-3">Sales and Refunds</a>
+                <a href="#" class="footer-legal">Legal</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
+
+    <script
+      src="/bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"
+      defer
+    ></script>
   </body>
 </html>
