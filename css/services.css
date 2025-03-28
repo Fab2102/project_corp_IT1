@@ -27,16 +27,21 @@
 
   
   /* Mission Statement */
-  margin: 40px 0;
+
+
+  #mission {
+  width: 100%;
 }
 
 .mission-background {
-  background: image(/images/Hintergrund_Mission.png)
-  height: 200px;
+  background-image: url('/images/Hintergrund_Mission.png'); /* Stelle sicher, dass der Pfad korrekt ist */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px; /* oder eine andere passende Höhe */
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
 .mission-text {
