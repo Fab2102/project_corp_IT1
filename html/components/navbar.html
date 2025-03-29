@@ -75,7 +75,7 @@
         padding-top: 0.4em;
         padding-bottom: 0.4em;
         border-radius: 0.9em;
-        transition: transform 0.25s ease-out;
+        transition: background-color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
       }
 
       .auth-links a:first-child {
@@ -91,6 +91,26 @@
         color: white;
         padding-right: 1em;
         padding-left: 1em;
+      }
+
+      .auth-links a:first-child:hover {
+        background-color: rgba(0, 0, 0, 0.06);
+      }
+
+      .auth-links a:first-child:active {
+        background-color: rgba(0, 0, 0, 0.12);
+      }
+
+      .auth-links a:last-child:hover {
+        color: rgba(255, 255, 255, 0.9);
+        background-color: #1f503a;
+        border-color: #1f503a;
+      }
+
+      .auth-links a:last-child:active {
+        color: rgba(255, 255, 255, 0.7);
+        background-color: #163d2c;
+        border-color: #163d2c;
       }
 
       .hamburger {
