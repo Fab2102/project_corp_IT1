@@ -6,7 +6,7 @@ let targetX = 0,
   targetY = 0;
 let currentX = 0,
   currentY = 0;
-const ease = 0.1; // Adjust this value for softer/smoother movement (0.1 = very smooth, 0.5 = less smooth)
+const ease = 0.1;
 
 function lerp(start, end, ease) {
   return start + (end - start) * ease;
@@ -23,19 +23,16 @@ function updatePosition() {
 }
 
 heroSection.addEventListener("mousemove", (e) => {
-  const { clientX, clientY } = e; // Get mouse position
-  const { offsetWidth, offsetHeight } = heroSection; // Get hero section dimensions
+  const { clientX, clientY } = e;
+  const { offsetWidth, offsetHeight } = heroSection;
 
-  // Calculate the percentage of mouse position relative to the hero section
-  targetX = (clientX / offsetWidth - 0.5) * 30; // Adjust multiplier for sensitivity
-  targetY = (clientY / offsetHeight - 0.5) * 30; // Adjust multiplier for sensitivity
+  targetX = (clientX / offsetWidth - 0.5) * 30;
+  targetY = (clientY / offsetHeight - 0.5) * 30;
 });
 
-// Reset the position when the mouse leaves the hero section
 heroSection.addEventListener("mouseleave", () => {
   targetX = 0;
   targetY = 0;
 });
 
-// Start the animation loop
 updatePosition();

@@ -276,12 +276,53 @@
       </div>
     </section>
 
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-4">
+          <!-- Reduced mb-5 to mb-4 -->
+          <h2 class="display-5 fw-light mb-2">Investment Growth</h2>
+          <!-- Reduced mb-3 to mb-2 -->
+          <p class="text-muted">Track your portfolio performance</p>
+          <!-- Removed fs-5 -->
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="card-body p-4">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <!-- Reduced mb-4 to mb-3 -->
+                  <div>
+                    <h3 class="fw-light mb-1">Your Portfolio</h3>
+                    <p class="text-muted mb-0 small">Last 12 months</p>
+                    <!-- Added small class -->
+                  </div>
+                  <div
+                    class="badge bg-success bg-opacity-10 text-success px-3 py-1 rounded-pill small"
+                  >
+                    +12.5% growth
+                  </div>
+                </div>
+                <div style="height: 250px">
+                  <!-- Fixed height container -->
+                  <canvas id="investmentChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div class="target-footer"></div>
 
     <script
       src="/bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"
       defer
     ></script>
+    <script src="/js/chart.umd.js"></script>
+    <script src="/js/investment-chart.js" defer></script>
     <script src="/js/hero-section.js" defer></script>
     <script src="/js/navbar.js" defer></script>
     <script src="/js/footer.js" defer></script>
