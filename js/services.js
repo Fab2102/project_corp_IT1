@@ -19,7 +19,7 @@ function startTyping() {
   
   function typeWriter(element) {
     if (i < fullText.length) {
-      element.textContent += fullText.charAt(i);
+      element.innerHTML += fullText.charAt(i);
       i++;
       setTimeout(() => typeWriter(element), speed);
     }
