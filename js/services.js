@@ -5,8 +5,13 @@ By bridging capital markets and environmental protection, we create meaningful i
 Our project stands for <b>innovation, sustainability, and inclusive participation</b> in a greener future.`;
 
 const speed = 10;
-let i = 0;
 let typing = false;
+
+function parseHTMLtoNodes(html) {
+  const container = document.createElement("div");
+  container.innerHTML = html;
+  return Array.from(container.childNodes);
+}
 
 function startTyping() {
   if (typing) return;
@@ -14,28 +19,50 @@ function startTyping() {
 
   const element = document.getElementById("typewriter");
   element.innerHTML = "";
-  i = 0;
-  typeWriter(element);
+
+  const nodes = parseHTMLtoNodes(fullText);
+  typeNodes(nodes, element, 0);
 }
 
-function typeWriter(element) {
-  if (i < fullText.length) {
-    if (fullText[i] === "<") {
-      // Detect the full HTML tag
-      let tagEnd = fullText.indexOf(">", i);
-      if (tagEnd !== -1) {
-        // Append the entire tag at once
-        element.innerHTML += fullText.slice(i, tagEnd + 1);
-        i = tagEnd + 1;
-      } else {
-        // If no closing '>' is found, just append the character
-        element.innerHTML += fullText[i];
-        i++;
-      }
-    } else {
-      element.innerHTML += fullText[i];
-      i++;
+function typeNodes(nodes, parent, index) {
+  if (index >= nodes.length) return;
+
+  const node = nodes[index];
+
+  if (node.nodeType === Node.TEXT_NODE) {
+    typeText(node.textContent, parent, 0, () => {
+      typeNodes(nodes, parent, index + 1);
+    });
+  } else if (node.nodeType === Node.ELEMENT_NODE) {
+    const newElem = document.createElement(node.tagName);
+    for (let attr of node.attributes) {
+      newElem.setAttribute(attr.name, attr.value);
     }
-    setTimeout(() => typeWriter(element), speed);
+    parent.appendChild(newElem);
+    const childNodes = Array.from(node.childNodes);
+    typeNodes(childNodes, newElem, 0); // Type children first
+    // When done with children, continue with the next sibling at this level
+    let observer = new MutationObserver(() => {
+      if (newElem.textContent.length === node.textContent.length) {
+        observer.disconnect();
+        typeNodes(nodes, parent, index + 1);
+      }
+    });
+    observer.observe(newElem, {
+      childList: true,
+      subtree: true,
+      characterData: true,
+    });
+  }
+}
+
+function typeText(text, parent, charIndex, callback) {
+  if (charIndex < text.length) {
+    parent.appendChild(document.createTextNode(text[charIndex]));
+    setTimeout(() => {
+      typeText(text, parent, charIndex + 1, callback);
+    }, speed);
+  } else {
+    callback();
   }
 }
