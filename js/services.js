@@ -8,18 +8,19 @@ let i = 0;
 let typing = false;
 
 function startTyping() {
-  if (typing) return; 
-  typing = true;
-  const element = document.getElementById("typewriter");
-  element.textContent = ""; 
-  i = 0;
-  typeWriter(element);
-}
-
-function typeWriter(element) {
-  if (i < fullText.length) {
-    element.textContent += fullText.charAt(i);
-    i++;
-    setTimeout(() => typeWriter(element), speed);
+    if (typing) return;
+    typing = true;
+  
+    const element = document.getElementById("typewriter");
+    element.textContent = ""; 
+    i = 0;
+    typeWriter(element);
   }
-}
+  
+  function typeWriter(element) {
+    if (i < fullText.length) {
+      element.textContent += fullText.charAt(i);
+      i++;
+      setTimeout(() => typeWriter(element), speed);
+    }
+  }
