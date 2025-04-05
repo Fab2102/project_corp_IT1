@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const leftToRightAnimationPlugin = {
     id: "leftToRightAnimation",
     beforeDatasetsDraw(chart) {
+      // If the initial animation is complete, do nothing
+      if (chart.$initialAnimationComplete) {
+        return;
+      }
       const { ctx, chartArea } = chart;
       const progress = chart.$leftToRightAnimationProgress || 0;
       ctx.save();
@@ -65,11 +69,21 @@ document.addEventListener("DOMContentLoaded", function () {
         maintainAspectRatio: false,
         animation: {
           easing: "easeInOutQuad",
-          duration: 1400, // Reduced duration for a faster effect (1 second)
+          duration: 1400,
           onProgress: function (animation) {
             const chart = animation.chart;
             chart.$leftToRightAnimationProgress =
               animation.currentStep / animation.numSteps;
+          },
+          onComplete: function (animation) {
+            const chart = animation.chart;
+            chart.$leftToRightAnimationProgress = 1;
+            chart.$initialAnimationComplete = true; // Set flag so plugin stops clipping on redraws
+          },
+        },
+        animations: {
+          hover: {
+            duration: 0, // Disable animation on hover
           },
         },
         plugins: {
