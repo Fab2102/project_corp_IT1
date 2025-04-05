@@ -12,11 +12,19 @@
 
 :root {
   --btn-primary-color: #2d6a4f;
+  --btn-primary-hover: #22573f; /* Darker green for hover/focus */
+  --btn-primary-border-hover: #1e4b37;
 }
 
 .btn-primary {
   background-color: var(--btn-primary-color) !important;
   border-color: var(--btn-primary-color) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--btn-primary-hover) !important;
+  border-color: var(--btn-primary-border-hover) !important;
 }
 
 * {
