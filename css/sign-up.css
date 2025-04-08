@@ -1,0 +1,30 @@
+.target-nav {
+  z-index: 3;
+}
+.card {
+  border: none;
+  border-radius: 16px;
+}
+.card-body {
+  padding: 2rem;
+}
+.form-control {
+  border-radius: 8px;
+  box-shadow: none;
+}
+.form-control:focus {
+  border-color: #0071e3;
+}
+h2 {
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+.btn {
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-weight: 600;
+}
+
+.target-footer {
+  margin-top: auto;
+}
