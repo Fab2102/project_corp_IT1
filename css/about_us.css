@@ -2,6 +2,11 @@ body {
   background-color: #f8f9fa;
 }
 
+.target-nav {
+  position: relative; /* or fixed if you want it always visible */
+  z-index: 1050; /* This value can be adjusted to be higher than the content below */
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -186,14 +191,16 @@ body {
   gap: 40px;
 }
 
-.mission, .vision {
+.mission,
+.vision {
   padding: 30px;
   background: white;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.mission h2, .vision h2 {
+.mission h2,
+.vision h2 {
   color: #2f2f2f;
   margin-bottom: 20px;
   font-size: 2rem;
@@ -274,11 +281,11 @@ body {
   .mission-vision .container {
     grid-template-columns: 1fr;
   }
-  
+
   .values-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .team-grid {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
