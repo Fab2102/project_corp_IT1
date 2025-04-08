@@ -1,121 +1,391 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Investree</title>
     <link
       rel="stylesheet"
       href="/bootstrap/bootstrap-5.3.3-dist/css/bootstrap.css"
     />
+    <link
+      rel="stylesheet"
+      href="/bootstrap/icons-1.11.3/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="/css/global.css" />
     <link rel="stylesheet" href="/css/services.css" />
-    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.css" />
-    <title>Investree</title>
+    <style>
+      /* Enable smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Minimal Apple-inspired styling */
+      body {
+        background-color: #f8f8f8;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        color: #333;
+      }
+      .hero {
+        background-color: #fff;
+        padding: 100px 0;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+      }
+      .hero p {
+        font-size: 1.5rem;
+        color: #666;
+      }
+      .service-section,
+      .info-section,
+      .testimonial-section,
+      .insights-section,
+      .investor-detail-section {
+        padding: 60px 0;
+      }
+      .service-card,
+      .info-card {
+        transition: transform 0.3s;
+      }
+      .service-card:hover,
+      .info-card:hover {
+        transform: translateY(-10px);
+      }
+      .service-icon,
+      .info-icon {
+        font-size: 3rem;
+        color: #2d6a4f;
+        margin-bottom: 20px;
+      }
+      .service-title,
+      .info-title {
+        font-size: 1.75rem;
+        font-weight: 500;
+        margin-bottom: 15px;
+      }
+      .service-description,
+      .info-description {
+        font-size: 1rem;
+        color: #777;
+      }
+      .testimonial-card {
+        background-color: #fff;
+        border: none;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+      }
+      .testimonial-text {
+        font-size: 1rem;
+        font-style: italic;
+        color: #555;
+        flex-grow: 1;
+      }
+      .testimonial-author {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-top: 15px;
+        color: #333;
+      }
+      /* Ensure testimonial cards have the same height */
+      .testimonial-col {
+        display: flex;
+      }
+      /* New Insights Section styling */
+      .insight-card {
+        transition: transform 0.3s;
+        border: 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: #fff;
+      }
+      .insight-card:hover {
+        transform: translateY(-10px);
+      }
+      .insight-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .insight-body {
+        padding: 20px;
+      }
+      .insight-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+      .insight-text {
+        font-size: 1rem;
+        color: #666;
+      }
+      /* Investor Detail Sections styling */
+      .investor-detail {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        margin-bottom: 30px;
+      }
+      .investor-detail h3 {
+        font-size: 1.75rem;
+        margin-bottom: 20px;
+      }
+      .investor-detail ul {
+        list-style: none;
+        padding: 0;
+      }
+      .investor-detail li {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        color: #555;
+      }
+      .investor-detail li i {
+        color: #2d6a4f;
+        margin-right: 10px;
+      }
+    </style>
   </head>
   <body>
+    <!-- Header from home.html -->
     <header>
       <div class="target-nav"></div>
     </header>
 
-    <section>
-      <!-- Drei Boxen nebeneinander -->
-      <section id="target-groups">
-        <div class="box">
-          <!-- Privatanleger -->
-          <img src="/images/Privatanleger.png" alt="Sparschwein" />
-          <h2>for private investors</h2>
-          <p>Invest sustainably and save our future</p>
-        </div>
-        <div class="box">
-          <!-- Institutionelle -->
-          <img src="/images/Institut.png" alt="Institutionelle Investoren" />
-          <h2>for institutional investors</h2>
-          <p>Enrich your portfolio with tokenized forests</p>
-        </div>
-        <div class="box">
-          <!-- Waldbesitzer -->
-          <img src="/images/Waldbesitzer.png" alt="Baum" />
-          <h2>for forest owners</h2>
-          <p>create new sources of income through our platform.</p>
-        </div>
-      </section>
-
-      <!-- Mission Statement -->
-      <section id="mission">
-        <div class="mission-background">
-          <div class="mission-text" onmouseover="startFading()">
-            <p>
-              <i
-                >Our goal is to protect forests sustainably while unlocking
-                their economic potential through cutting-edge blockchain
-                technology. We empower forest owners to tokenize the ecological
-                and financial value of their land. This gives investors
-                transparent access to real, climate-relevant natural assets. By
-                bridging capital markets and environmental protection, we create
-                meaningful impact. Our project stands for innovation,
-                sustainability, and inclusive participation in a greener
-                future.</i
-              >
-            </p>
-            <div id="typewriter"></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="advantages">
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <!-- Vorderseite -->
-            <div class="flip-card-front">
-              <img
-                src="/images/Vorteile Waldbesitzer.jpg"
-                alt="Anleger Vorteile"
-              />
-              <div class="flip-card-text">
-                <h3>your advantages as owner</h3>
-              </div>
-            </div>
-
-            <div class="flip-card-back">
-              <h3><b>benefit from…</b></h3>
-              <ul>
-                <li>cash flows from renting</li>
-                <li>new sources of income</li>
-                <li>economies of scale</li>
-                <li>climate credit points</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <!-- Vorderseite -->
-            <div class="flip-card-front">
-              <img src="/images/Vorteile Anleger.png" alt="Anleger Vorteile" />
-              <div class="flip-card-text">
-                <h3>your advantages as investor</h3>
-              </div>
-            </div>
-
-            <!-- Rückseite -->
-            <div class="flip-card-back">
-              <h3><b>benefit from…</b></h3>
-              <ul>
-                <li>sustainable assets</li>
-                <li>real world asset backing</li>
-                <li>diversification</li>
-                <li>climate protection</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Our Services</h1>
+        <p>Innovative solutions designed to drive your investments forward.</p>
+      </div>
     </section>
 
+    <!-- Services Cards Section -->
+    <section class="service-section">
+      <div class="container">
+        <div class="row">
+          <!-- Service Card 1: Private Investors -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div
+              class="card service-card h-100 border-0 shadow-sm rounded-4 d-flex"
+            >
+              <div class="card-body text-center d-flex flex-column">
+                <div class="service-icon">
+                  <i class="bi bi-briefcase"></i>
+                </div>
+                <h3 class="service-title">Private Investors</h3>
+                <p class="service-description flex-grow-1">
+                  Exclusive blockchain-secured opportunities for discerning
+                  private investors seeking sustainable forest investments.
+                </p>
+                <a href="#private-investors" class="stretched-link"></a>
+              </div>
+            </div>
+          </div>
+          <!-- Service Card 2: Institutional Investors -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div
+              class="card service-card h-100 border-0 shadow-sm rounded-4 d-flex"
+            >
+              <div class="card-body text-center d-flex flex-column">
+                <div class="service-icon">
+                  <i class="bi bi-building"></i>
+                </div>
+                <h3 class="service-title">Institutional Investors</h3>
+                <p class="service-description flex-grow-1">
+                  Transparent, scalable blockchain-enabled solutions designed to
+                  help institutional investors enhance portfolio growth.
+                </p>
+                <a href="#institutional-investors" class="stretched-link"></a>
+              </div>
+            </div>
+          </div>
+          <!-- Service Card 3: Forest Owners -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div
+              class="card service-card h-100 border-0 shadow-sm rounded-4 d-flex"
+            >
+              <div class="card-body text-center d-flex flex-column">
+                <div class="service-icon">
+                  <i class="bi bi-tree"></i>
+                </div>
+                <h3 class="service-title">Forest Owners</h3>
+                <p class="service-description flex-grow-1">
+                  Empowering forest owners through technology, ensuring
+                  sustainable management and maximized returns on natural
+                  assets.
+                </p>
+                <a href="#forest-owners" class="stretched-link"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Section: Why Investree? -->
+    <section class="info-section bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <h2 class="info-title">Why Investree?</h2>
+            <p class="info-description">
+              At Investree, we combine cutting-edge blockchain technology with
+              deep industry expertise to provide unparalleled investment
+              opportunities. Our dedicated team ensures transparency,
+              reliability, and sustainability in every project.
+            </p>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="bi bi-check-circle-fill text-success"></i>
+                Proven track record of successful investments.
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-check-circle-fill text-success"></i>
+                End-to-end support from strategy to execution.
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-check-circle-fill text-success"></i>
+                Commitment to environmental sustainability.
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <!-- Real image loaded from Unsplash -->
+            <img
+              src="/images/amazon_brazil.jpg"
+              alt="Investree Benefits"
+              class="img-fluid rounded-4 shadow-sm"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Section: Client Testimonials -->
+    <section class="testimonial-section">
+      <div class="container">
+        <h2 class="text-center mb-5">Client Testimonials</h2>
+        <div class="row">
+          <div class="col-md-4 testimonial-col">
+            <div class="testimonial-card flex-fill">
+              <p class="testimonial-text">
+                "Investree has transformed our investment approach. The
+                transparency and innovation they bring is unmatched."
+              </p>
+              <p class="testimonial-author">– Alex Johnson, Private Investor</p>
+            </div>
+          </div>
+          <div class="col-md-4 testimonial-col">
+            <div class="testimonial-card flex-fill">
+              <p class="testimonial-text">
+                "Their blockchain-enabled platform gives us confidence in every
+                step. We’re seeing solid returns and sustainable growth."
+              </p>
+              <p class="testimonial-author">
+                – Maria Brie, Institutional Investor
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 testimonial-col">
+            <div class="testimonial-card flex-fill">
+              <p class="testimonial-text">
+                "The team at Investree is dedicated, professional, and truly
+                innovative. Their approach to forest investments is a game
+                changer."
+              </p>
+              <p class="testimonial-author">– Liam Smith, Forest Owner</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Section: Investor Details -->
+    <section class="investor-detail-section">
+      <div class="container">
+        <!-- Detail for Private Investors -->
+        <div id="private-investors" class="investor-detail mb-5">
+          <h3>Private Investors</h3>
+          <p>
+            Our platform offers private investors exclusive access to
+            high-return opportunities secured by blockchain technology.
+          </p>
+          <ul>
+            <li>
+              <i class="bi bi-check-circle-fill"></i> High-yield investment
+              opportunities
+            </li>
+            <li>
+              <i class="bi bi-check-circle-fill"></i> Secure transactions and
+              transparency
+            </li>
+            <li>
+              <i class="bi bi-check-circle-fill"></i> Personalized investment
+              strategies
+            </li>
+          </ul>
+        </div>
+        <!-- Detail for Institutional Investors -->
+        <div id="institutional-investors" class="investor-detail mb-5">
+          <h3>Institutional Investors</h3>
+          <p>
+            Tailored for large-scale investors, our solutions provide scalable
+            models, robust analytics, and streamlined portfolio management.
+          </p>
+          <ul>
+            <li>
+              <i class="bi bi-check-circle-fill"></i> Scalable investment models
+            </li>
+            <li>
+              <i class="bi bi-check-circle-fill"></i> Comprehensive portfolio
+              analytics
+            </li>
+            <li>
+              <i class="bi bi-check-circle-fill"></i> Enhanced risk management
+              and compliance
+            </li>
+          </ul>
+        </div>
+        <!-- Detail for Forest Owners -->
+        <div id="forest-owners" class="investor-detail mb-5">
+          <h3>Forest Owners</h3>
+          <p>
+            We empower forest owners to monetize natural assets while promoting
+            sustainable management and long-term environmental benefits.
+          </p>
+          <ul>
+            <li>
+              <i class="bi bi-check-circle-fill"></i> Maximized asset returns
+            </li>
+            <li>
+              <i class="bi bi-check-circle-fill"></i> Sustainable forest
+              management practices
+            </li>
+            <li>
+              <i class="bi bi-check-circle-fill"></i> Improved market visibility
+              for natural assets
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer from home.html -->
     <div class="target-footer"></div>
 
+    <script
+      src="/bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"
+      defer
+    ></script>
     <script src="/js/navbar.js" defer></script>
     <script src="/js/footer.js" defer></script>
-    <script src="/js/services.js" defer></script>
   </body>
 </html>
