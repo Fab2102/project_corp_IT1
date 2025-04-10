@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parcels>
+  <parcel id="1">
+    <title>Amazon Rainforest</title>
+    <location>Brazil</location>
+    <size>150 hectares</size>
+    <price>$5,000 / ha</price>
+    <notes>Prime opportunity to invest in a globally significant, richly biodiverse tract.</notes>
+  </parcel>
+  <parcel id="2">
+    <title>Bayer Forest</title>
+    <location>Bavaria, Germany</location>
+    <size>200 hectares</size>
+    <price>$7,500 / ha</price>
+    <notes>A scenic, well-maintained forest area ideal for sustainable projects.</notes>
+  </parcel>
+  <parcel id="3">
+    <title>Tongass Forest</title>
+    <location>Alaska, USA</location>
+    <size>120 hectares</size>
+    <price>$6,500 / ha</price>
+    <notes>Rich in wildlife and potential for eco-friendly developments.</notes>
+  </parcel>
+  <parcel id="4">
+    <title>Daintree Rainforest</title>
+    <location>Queensland, Australia</location>
+    <size>180 hectares</size>
+    <price>$8,000 / ha</price>
+    <notes>A lush tropical paradise with excellent growth and development prospects.</notes>
+  </parcel>
+</parcels>
