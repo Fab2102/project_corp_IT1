@@ -27,9 +27,9 @@
             <h1>About Us</h1>
             <p>
               Investree makes investing in forests simple, transparent, and
-              accessible for everyone. We connect individuals to sustainable forest
-              investment opportunities. Our platform allows users to easily invest,
-              own, and benefit from forest assets together.
+              accessible for everyone. We connect individuals to sustainable
+              forest investment opportunities. Our platform allows users to
+              easily invest, own, and benefit from forest assets together.
             </p>
           </div>
         </div>
@@ -37,8 +37,8 @@
     </section>
 
     <!-- Impact Section -->
-    <section class="impact-section">
-       <div class="container">
+    <section class="impact-section mt-5 mb-5">
+      <div class="container">
         <h2>Our Impact</h2>
         <div class="impact-stats">
           <div class="stat-item">
@@ -57,17 +57,22 @@
       </div>
     </section>
 
-
     <!-- Mission & Vision Section -->
-    <section class="mission-vision">
+    <section class="mission-vision mt-5">
       <div class="container">
         <div class="mission">
           <h2>Our Mission</h2>
-          <p>To democratize forest investment while promoting sustainable forestry practices and environmental conservation.</p>
+          <p>
+            To democratize forest investment while promoting sustainable
+            forestry practices and environmental conservation.
+          </p>
         </div>
         <div class="vision">
           <h2>Our Vision</h2>
-          <p>Creating a world where everyone can participate in forest conservation through sustainable investment.</p>
+          <p>
+            Creating a world where everyone can participate in forest
+            conservation through sustainable investment.
+          </p>
         </div>
       </div>
     </section>
@@ -79,7 +84,9 @@
         <div class="values-grid">
           <div class="value-item">
             <h3>Sustainability</h3>
-            <p>We prioritize environmental responsibility in all our operations.</p>
+            <p>
+              We prioritize environmental responsibility in all our operations.
+            </p>
           </div>
           <div class="value-item">
             <h3>Transparency</h3>
@@ -87,35 +94,26 @@
           </div>
           <div class="value-item">
             <h3>Innovation</h3>
-            <p>We continuously evolve our platform to better serve our community.</p>
+            <p>
+              We continuously evolve our platform to better serve our community.
+            </p>
           </div>
           <div class="value-item">
             <h3>Accessibility</h3>
-            <p>We make forest investment available to everyone, regardless of experience level.</p>
+            <p>
+              We make forest investment available to everyone, regardless of
+              experience level.
+            </p>
           </div>
         </div>
-      </section>
-
+      </div>
+      <!-- Added closing tag for .container -->
+    </section>
 
     <div class="target-footer"></div>
 
     <script src="/js/navbar.js" defer></script>
     <script src="/js/footer.js" defer></script>
-    <script>
-      // Add fade-in animation when scrolling
-      document.addEventListener('DOMContentLoaded', function() {
-        const aboutSection = document.querySelector('.about-section');
-        aboutSection.style.opacity = '0';
-        aboutSection.style.transform = 'translateY(20px)';
-        aboutSection.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        
-        setTimeout(() => {
-          aboutSection.style.opacity = '1';
-          aboutSection.style.transform = 'translateY(0)';
-        }, 200);
-      });
-    </script>
     <script src="/js/about_us.js"></script>
   </body>
 </html>
-
