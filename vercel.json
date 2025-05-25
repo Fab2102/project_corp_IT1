@@ -1,4 +1,10 @@
 {
   "version": 2,
-  "routes": [{ "handle": "filesystem" }, { "src": "/(.*)", "dest": "/html/$1" }]
+  "builds": [
+    {
+      "src": "html/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [{ "handle": "filesystem" }, { "src": "/(.*)", "dest": "html/$1" }]
 }
