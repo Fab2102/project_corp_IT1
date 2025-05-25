@@ -10,5 +10,5 @@ function validateSignup(event) {
     return false;
   }
 
-  alert("Successful Sign-up for " + username + " with email " + email);
+  alert("Authentication not implemented for this demo.");
 }
