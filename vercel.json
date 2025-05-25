@@ -1,10 +1,13 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "html/pages/**/*",
-      "use": "@vercel/static"
-    }
+    { "src": "html/pages/**/*", "use": "@vercel/static" },
+    { "src": "html/components/**/*", "use": "@vercel/static" },
+    { "src": "css/**/*", "use": "@vercel/static" },
+    { "src": "js/**/*", "use": "@vercel/static" },
+    { "src": "images/**/*", "use": "@vercel/static" },
+    { "src": "xml/**/*", "use": "@vercel/static" },
+    { "src": "favicon.png", "use": "@vercel/static" }
   ],
   "routes": [
     { "handle": "filesystem" },
