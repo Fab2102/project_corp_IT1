@@ -32,7 +32,10 @@ function setupNavbar() {
   }
 
   // Highlight active nav link
-  const currentPath = window.location.pathname;
+  let currentPath = window.location.pathname;
+  if (currentPath === "/") {
+    currentPath = "/index.html";
+  }
   document.querySelectorAll(".nav-links a, .mobile-menu a").forEach((link) => {
     if (link.href.includes(currentPath)) {
       link.classList.add("active");
