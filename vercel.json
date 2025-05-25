@@ -1,7 +1,4 @@
 {
   "version": 2,
-  "routes": [{ "src": "/(.*)", "dest": "html/$1" }],
-  "static": {
-    "public": "html"
-  }
+  "routes": [{ "handle": "filesystem" }, { "src": "/(.*)", "dest": "/html/$1" }]
 }
